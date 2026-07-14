@@ -71,6 +71,41 @@
 }
 </script>
 
+<!-- Structured data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cât costă serviciile de contabilitate în Moldova?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prețul depinde de domeniul de activitate, numărul de angajați și volumul de documente. Folosește calculatorul online pentru o estimare orientativă — pornim de la 500 lei/lună pentru firme fără activitate." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce acte sunt necesare pentru înființarea unui SRL în Moldova?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ai nevoie de actul de identitate al fondatorului(-ilor), denumirea companiei, adresa juridică și decizia privind capitalul social. Consultanța este gratuită, iar înregistrarea propriu-zisă pornește de la 3 000 lei." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este statutul de rezident Moldova IT Park și ce beneficii oferă?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Este un regim fiscal special pentru companii IT, cu un impozit unic de 7% din venitul din vânzări, în locul mai multor taxe separate. Oferim contabilitate specializată și asistență gratuită la depunerea cererii de statut." }
+    },
+    {
+      "@type": "Question",
+      "name": "Lucrați și cu companii din afara Chișinăului?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Da. Majoritatea serviciilor noastre se desfășoară online — documentele circulă digital, iar comunicarea are loc prin telefon sau e-mail, indiferent unde este înregistrată firma ta în Moldova." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum aleg o firmă de contabilitate potrivită pentru afacerea mea?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Caută experiență dovedită, comunicare directă cu un contabil dedicat și transparență privind prețul. CIFRA.MD oferă toate trei, plus un calculator de preț public, fără costuri ascunse." }
+    }
+  ]
+}
+</script>
+
 <style>
   :root{
     --navy: #0f2743;
@@ -358,6 +393,24 @@
   table.pricetable th{ color:var(--text-dim); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.03em; }
   table.pricetable td:last-child, table.pricetable th:last-child{ text-align:right; font-weight:700; color:var(--navy); white-space:nowrap;}
 
+  /* FAQ */
+  .faq-list{ display:flex; flex-direction:column; gap:14px; max-width:820px; margin:0 auto; }
+  .faq-item{
+    background:var(--glass);
+    backdrop-filter:blur(28px) saturate(180%);
+    -webkit-backdrop-filter:blur(28px) saturate(180%);
+    border:1px solid var(--glass-border); border-radius:var(--radius-sm);
+    padding:4px 22px;
+  }
+  .faq-item summary{
+    cursor:pointer; list-style:none; padding:16px 0; font-weight:700; color:var(--navy); font-size:15.5px;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{ content:"+"; font-size:20px; font-weight:400; color:var(--blue); transition:transform .2s; flex-shrink:0;}
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item p{ padding:0 0 18px; color:var(--text-dim); font-size:14.5px; }
+
   /* CONTACT */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
   .contact-info{display:flex; flex-direction:column; gap:24px;}
@@ -467,7 +520,7 @@
   <section class="hero">
     <div class="wrap">
       <div class="eyebrow" data-i18n="hero.eyebrow">Contabilitate autorizată în Republica Moldova</div>
-      <h1 data-i18n="hero.title">Contabilitate profesionistă pentru afacerea ta</h1>
+      <h1 data-i18n="hero.title">Contabilitate profesionistă pentru afacerea ta din Moldova</h1>
       <p data-i18n="hero.subtitle">CIFRA.MD ține evidența contabilă, salarizarea și raportările fiscale ale companiei tale — corect, la timp și fără bătăi de cap.</p>
       <div class="hero-cta">
         <a href="#calculator" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">Calculează prețul serviciilor</a>
@@ -678,6 +731,39 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="faq.eyebrow">Întrebări frecvente</div>
+        <h2 data-i18n="faq.title">Întrebări frecvente despre contabilitate în Moldova</h2>
+        <p data-i18n="faq.subtitle">Răspunsuri scurte la cele mai comune întrebări primite de la clienții noștri din Chișinău și din toată Moldova.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq.q1.q">Cât costă serviciile de contabilitate în Moldova?</summary>
+          <p data-i18n="faq.q1.a">Prețul depinde de domeniul de activitate, numărul de angajați și volumul de documente. Folosește calculatorul de mai sus pentru o estimare orientativă — pornim de la 500 lei/lună pentru firme fără activitate.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2.q">Ce acte sunt necesare pentru înființarea unui SRL în Moldova?</summary>
+          <p data-i18n="faq.q2.a">Ai nevoie de actul de identitate al fondatorului(-ilor), denumirea companiei, adresa juridică și decizia privind capitalul social. Te ajutăm gratuit cu consultanța, iar înregistrarea propriu-zisă pornește de la 3 000 lei.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3.q">Ce este statutul de rezident Moldova IT Park și ce beneficii oferă?</summary>
+          <p data-i18n="faq.q3.a">Este un regim fiscal special pentru companii IT, cu un impozit unic de 7% din venitul din vânzări, în locul mai multor taxe separate. Oferim contabilitate specializată și asistență gratuită la depunerea cererii de statut.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4.q">Lucrați și cu companii din afara Chișinăului?</summary>
+          <p data-i18n="faq.q4.a">Da. Majoritatea serviciilor noastre se desfășoară online — documentele circulă digital, iar comunicarea are loc prin telefon sau e-mail, indiferent unde este înregistrată firma ta în Moldova.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5.q">Cum aleg o firmă de contabilitate potrivită pentru afacerea mea?</summary>
+          <p data-i18n="faq.q5.a">Caută experiență dovedită, comunicare directă cu un contabil dedicat și transparență privind prețul. CIFRA.MD oferă toate trei, plus un calculator de preț public, fără costuri ascunse.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
@@ -777,6 +863,7 @@
         <a href="#servicii" data-i18n="nav.services">Servicii</a>
         <a href="#despre" data-i18n="nav.about">Despre noi</a>
         <a href="#calculator" data-i18n="nav.calculator">Calculator preț</a>
+        <a href="#faq" data-i18n="nav.faq">Întrebări frecvente</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
     </div>
@@ -792,10 +879,10 @@
   const translations = {
     ro: {
       meta: { title: "CIFRA.MD — Servicii de contabilitate pentru afaceri din Moldova", description: "CIFRA.MD oferă servicii de contabilitate, salarizare, consultanță fiscală și contabilitate pentru companii IT Park în Moldova. Calculează prețul serviciilor online." },
-      nav: { services: "Servicii", about: "Despre noi", calculator: "Calculator preț", contact: "Contact", cta: "Solicită ofertă" },
+      nav: { services: "Servicii", about: "Despre noi", calculator: "Calculator preț", faq: "Întrebări frecvente", contact: "Contact", cta: "Solicită ofertă" },
       hero: {
         eyebrow: "Contabilitate autorizată în Republica Moldova",
-        title: "Contabilitate profesionistă pentru afacerea ta",
+        title: "Contabilitate profesionistă pentru afacerea ta din Moldova",
         subtitle: "CIFRA.MD ține evidența contabilă, salarizarea și raportările fiscale ale companiei tale — corect, la timp și fără bătăi de cap.",
         ctaPrimary: "Calculează prețul serviciilor", ctaGhost: "Vezi serviciile",
         stat1: "ani de experiență", stat2: "companii deservite", stat3: "amenzi fiscale la clienți", stat4: "timp mediu de răspuns"
@@ -852,6 +939,15 @@
         r7: "Înregistrarea companiei (SRL)",
         free: "Gratuit", p5: "500 lei", p6: "calculat individual", p7: "de la 3 000 lei"
       },
+      faq: {
+        eyebrow: "Întrebări frecvente", title: "Întrebări frecvente despre contabilitate în Moldova",
+        subtitle: "Răspunsuri scurte la cele mai comune întrebări primite de la clienții noștri din Chișinău și din toată Moldova.",
+        q1: { q: "Cât costă serviciile de contabilitate în Moldova?", a: "Prețul depinde de domeniul de activitate, numărul de angajați și volumul de documente. Folosește calculatorul de mai sus pentru o estimare orientativă — pornim de la 500 lei/lună pentru firme fără activitate." },
+        q2: { q: "Ce acte sunt necesare pentru înființarea unui SRL în Moldova?", a: "Ai nevoie de actul de identitate al fondatorului(-ilor), denumirea companiei, adresa juridică și decizia privind capitalul social. Te ajutăm gratuit cu consultanța, iar înregistrarea propriu-zisă pornește de la 3 000 lei." },
+        q3: { q: "Ce este statutul de rezident Moldova IT Park și ce beneficii oferă?", a: "Este un regim fiscal special pentru companii IT, cu un impozit unic de 7% din venitul din vânzări, în locul mai multor taxe separate. Oferim contabilitate specializată și asistență gratuită la depunerea cererii de statut." },
+        q4: { q: "Lucrați și cu companii din afara Chișinăului?", a: "Da. Majoritatea serviciilor noastre se desfășoară online — documentele circulă digital, iar comunicarea are loc prin telefon sau e-mail, indiferent unde este înregistrată firma ta în Moldova." },
+        q5: { q: "Cum aleg o firmă de contabilitate potrivită pentru afacerea mea?", a: "Caută experiență dovedită, comunicare directă cu un contabil dedicat și transparență privind prețul. CIFRA.MD oferă toate trei, plus un calculator de preț public, fără costuri ascunse." }
+      },
       contact: {
         eyebrow: "Contact", title: "Hai să discutăm despre afacerea ta",
         subtitle: "Completează formularul sau contactează-ne direct — răspundem în cel mult 24 de ore lucrătoare.",
@@ -872,10 +968,10 @@
     },
     ru: {
       meta: { title: "CIFRA.MD — Бухгалтерские услуги для бизнеса в Молдове", description: "CIFRA.MD предоставляет услуги бухгалтерского учёта, расчёта зарплаты, налогового консультирования и бухгалтерии для резидентов IT Park в Молдове. Рассчитайте стоимость услуг онлайн." },
-      nav: { services: "Услуги", about: "О нас", calculator: "Калькулятор цены", contact: "Контакты", cta: "Запросить предложение" },
+      nav: { services: "Услуги", about: "О нас", calculator: "Калькулятор цены", faq: "Частые вопросы", contact: "Контакты", cta: "Запросить предложение" },
       hero: {
         eyebrow: "Лицензированный бухгалтерский учёт в Республике Молдова",
-        title: "Профессиональная бухгалтерия для вашего бизнеса",
+        title: "Профессиональная бухгалтерия для вашего бизнеса в Молдове",
         subtitle: "CIFRA.MD ведёт бухгалтерский учёт, расчёт зарплаты и налоговую отчётность вашей компании — точно, вовремя и без лишних хлопот.",
         ctaPrimary: "Рассчитать стоимость услуг", ctaGhost: "Смотреть услуги",
         stat1: "лет опыта", stat2: "обслуженных компаний", stat3: "налоговых штрафов у клиентов", stat4: "среднее время ответа"
@@ -932,6 +1028,15 @@
         r7: "Регистрация компании (SRL)",
         free: "Бесплатно", p5: "500 лей", p6: "рассчитывается индивидуально", p7: "от 3 000 лей"
       },
+      faq: {
+        eyebrow: "Часто задаваемые вопросы", title: "Часто задаваемые вопросы о бухгалтерии в Молдове",
+        subtitle: "Короткие ответы на самые частые вопросы наших клиентов из Кишинёва и всей Молдовы.",
+        q1: { q: "Сколько стоят бухгалтерские услуги в Молдове?", a: "Цена зависит от сферы деятельности, числа сотрудников и объёма документов. Используйте калькулятор выше для ориентировочной оценки — от 500 лей/месяц для компаний без деятельности." },
+        q2: { q: "Какие документы нужны для регистрации SRL в Молдове?", a: "Нужны удостоверение личности учредителя(ей), название компании, юридический адрес и решение об уставном капитале. Консультация бесплатна, а сама регистрация — от 3 000 лей." },
+        q3: { q: "Что такое статус резидента Moldova IT Park и какие льготы он даёт?", a: "Это особый налоговый режим для IT-компаний с единым налогом 7% от дохода от продаж вместо нескольких отдельных налогов. Мы предлагаем специализированный учёт и бесплатную помощь в подаче заявки на статус." },
+        q4: { q: "Вы работаете с компаниями за пределами Кишинёва?", a: "Да. Большинство наших услуг предоставляется онлайн — документы передаются в цифровом виде, а общение происходит по телефону или e-mail, независимо от места регистрации вашей компании в Молдове." },
+        q5: { q: "Как выбрать подходящую бухгалтерскую фирму для моего бизнеса?", a: "Ищите подтверждённый опыт, прямое общение с выделенным бухгалтером и прозрачность цены. CIFRA.MD предлагает всё это, плюс публичный калькулятор цены без скрытых платежей." }
+      },
       contact: {
         eyebrow: "Контакты", title: "Давайте обсудим ваш бизнес",
         subtitle: "Заполните форму или свяжитесь с нами напрямую — мы отвечаем не позднее чем через 24 рабочих часа.",
@@ -952,10 +1057,10 @@
     },
     en: {
       meta: { title: "CIFRA.MD — Accounting Services for Businesses in Moldova", description: "CIFRA.MD provides accounting, payroll, tax consulting and IT Park accounting services in Moldova. Calculate your service price online." },
-      nav: { services: "Services", about: "About Us", calculator: "Price Calculator", contact: "Contact", cta: "Request a Quote" },
+      nav: { services: "Services", about: "About Us", calculator: "Price Calculator", faq: "FAQ", contact: "Contact", cta: "Request a Quote" },
       hero: {
         eyebrow: "Licensed Accounting in the Republic of Moldova",
-        title: "Professional Accounting for Your Business",
+        title: "Professional Accounting for Your Business in Moldova",
         subtitle: "CIFRA.MD handles your company's bookkeeping, payroll and tax reporting — accurately, on time, and hassle-free.",
         ctaPrimary: "Calculate Service Price", ctaGhost: "View Services",
         stat1: "years of experience", stat2: "companies served", stat3: "tax fines for clients", stat4: "average response time"
@@ -1011,6 +1116,15 @@
         r5: "Financial statement (balance sheet) for banks / institutions", r6: "Restoring previous accounting records",
         r7: "Company registration (SRL)",
         free: "Free", p5: "500 MDL", p6: "calculated individually", p7: "from 3,000 MDL"
+      },
+      faq: {
+        eyebrow: "FAQ", title: "Frequently Asked Questions About Accounting in Moldova",
+        subtitle: "Quick answers to the most common questions from our clients in Chișinău and across Moldova.",
+        q1: { q: "How much do accounting services cost in Moldova?", a: "The price depends on your field of activity, number of employees and document volume. Use the calculator above for an indicative estimate — starting from 500 MDL/month for companies with no activity." },
+        q2: { q: "What documents are needed to register an SRL in Moldova?", a: "You'll need the founder's(s') ID, the company name, a legal address and a decision on share capital. Consulting is free, and registration itself starts from 3,000 MDL." },
+        q3: { q: "What is Moldova IT Park resident status and what benefits does it offer?", a: "It's a special tax regime for IT companies with a single 7% tax on sales revenue instead of several separate taxes. We offer specialized accounting and free assistance applying for the status." },
+        q4: { q: "Do you work with companies outside Chișinău?", a: "Yes. Most of our services run online — documents are exchanged digitally and communication happens by phone or email, regardless of where your company is registered in Moldova." },
+        q5: { q: "How do I choose the right accounting firm for my business?", a: "Look for proven experience, direct communication with a dedicated accountant, and price transparency. CIFRA.MD offers all three, plus a public price calculator with no hidden costs." }
       },
       contact: {
         eyebrow: "Contact", title: "Let's talk about your business",
